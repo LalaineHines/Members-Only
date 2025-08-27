@@ -1,0 +1,29 @@
+header{
+    background-color: #0b27c9;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1{
+    font-size: 1.8rem;
+}
+nav a{
+    margin-left: 1rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    transition: background 0.3 ease;
+}
+nav a:hover{
+    background-color: #0e76d8;
+    color: #fff;
+}
+main{
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

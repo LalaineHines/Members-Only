@@ -1,0 +1,21 @@
+<h2>Messages</h2>
+
+<div class="messages-list">
+    <% messages.forEach(msg => { %>
+        <div class="message-card">
+                <h3><%= msg.title %></h3>
+                        <p><%= msg.text %></p>
+                                <% if (user && user.is_member) { %>
+                                        <small>By <%= msg.first_name %> <%= msg.last_name %> on <%= new Date(msg.timestamp).toLocaleString() %></small>
+                                                <% } else {%>
+                                                        <small>Author hidden. Join the club to see more!</small>
+                                                                <% } %>
+
+                                                                        <% if (user && user.is_admin) { %>
+                                                                                <form action="/messages/<%= msg.id %>/delete" method="POST" class="delete-form">
+                                                                                            <button type="submit">Delete</button>
+                                                                                                    </form>
+                                                                                                            <% } %>
+                                                                                                                </div>
+                                                                                                                    <% }) %>
+                                                                                                                    </div>

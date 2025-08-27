@@ -1,0 +1,30 @@
+<h2>Sign Up</h2>
+
+<form method="POST" action="/auth/signup" class="auth-card">
+    <div class="form-grid">
+            <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+
+                            <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+
+                                            <label for="username">Email</label>
+                                                    <input type="email" id="username" name="username" required>
+
+                                                            <label for="password">Password</label>
+                                                                    <input type="password" id="password" name="password" required>
+
+                                                                            <label for="confirmPassword">Confirm Password</label>
+                                                                                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                                                                                            <div class="form-actions">
+                                                                                                        <button type="submit">Sign Up</button>
+                                                                                                                </div>
+                                                                                                                    </div>
+                                                                                                                    </form>
+
+                                                                                                                    <ul>
+                                                                                                                        <%errors.forEach(e => { %>
+                                                                                                                            <li style="color: red;"><%= e.msg %></li>
+                                                                                                                                <% }) %>
+                                                                                                                                </ul>

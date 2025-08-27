@@ -1,0 +1,44 @@
+<% page = typeof page !== 'undefined' ? page : ''; %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Members Only</title>
+                <link rel="stylesheet" href="/css/base.css">
+                    <link rel="stylesheet" href="/css/layout.css">
+                        <% if (page === 'home') { %>
+                            <link rel="stylesheet" href="/css/home.css">
+                                <% } %>
+                                    <% if (page === 'auth') { %>
+                                        <link rel="stylesheet" href="/css/auth.css">
+                                            <% } %>
+                                                <% if (page === 'join') { %>
+                                                    <link rel="stylesheet" href="/css/join.css">
+                                                        <% } %>
+                                                            <% if (page === 'message') { %>
+                                                                <link rel="stylesheet" href="/css/message.css">
+                                                                    <% } %>
+                                                                    </head>
+                                                                    <body>
+                                                                        <header>
+                                                                                <h1>Members Only Club</h1>
+                                                                                            <nav>
+                                                                                                            <% if (!user) { %>
+                                                                                                                            <a href="/auth/signup">Sign Up</a>
+                                                                                                                                            <a href="/auth/login">Login</a>
+                                                                                                                                                            <% } else { %>
+                                                                                                                                                                                <span>Welcome, <%= user.first_name %></span>
+                                                                                                                                                                                                    <a href="/">Home</a>
+                                                                                                                                                                                                                        <a href="/messages/new">New Message</a>
+                                                                                                                                                                                                                                            <a href="/join">Join Club</a>
+                                                                                                                                                                                                                                                                <a href="/auth/logout">Logout</a>
+                                                                                                                                                                                                                                                                                <% } %>
+                                                                                                                                                                                                                                                                                            </nav>
+                                                                                                                                                                                                                                                                                                </header>
+                                                                                                                                                                                                                                                                                                    <main>
+                                                                                                                                                                                                                                                                                                            <%- body %>
+                                                                                                                                                                                                                                                                                                                </main>
+                                                                                                                                                                                                                                                                                                                </body>
+                                                                                                                                                                                                                                                                                                                </html>

@@ -1,0 +1,23 @@
+<h2>Create New Message</h2>
+
+<form method="POST" action="/messages/new" class="auth-card">
+    <div class="form-grid">
+            <label for="title">Title</label>
+                    <input type="text" id="title" name="title" required>
+
+                            <label for="text">Message</label>
+                                    <textarea name="text" id="text" rows="5" required></textarea>
+
+                                            <div class="form-actions">
+                                                        <button type="submit">Post</button>
+                                                                </div>
+                                                                    </div>
+                                                                    </form>
+
+                                                                    <% if (typeof errors !== "undefined" && errors.length > 0) { %>
+                                                                    <ul>
+                                                                        <% errors.forEach(e => { %>
+                                                                            <li style="color: red;"><%= e.msg %></li>
+                                                                                <% }) %>
+                                                                                </ul>
+                                                                                <% } %>

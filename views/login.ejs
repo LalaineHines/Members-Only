@@ -1,0 +1,23 @@
+<h2>Login</h2>
+
+<form method="POST" action="/auth/login" class="auth-card">
+    <div class="form-grid">
+            <label for="username">Email</label>
+                    <input type="email" id="username" name="username" required>
+
+                            <label for="password">Password</label>
+                                    <input type="password" id="password" name="password" required>
+
+                                            <div class="form-actions">
+                                                        <button type="submit">Login</button>
+                                                                </div>
+                                                                    </div>
+                                                                    </form>
+
+                                                                    <% if (typeof errors !== "undefined" && errors.length > 0) {%>
+                                                                    <ul>
+                                                                        <% errors.forEach(e => { %>
+                                                                            <li style="color: red;"><%= e.msg %></li>
+                                                                                <% }) %>
+                                                                                </ul>
+                                                                                <% } %>

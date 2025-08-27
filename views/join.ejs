@@ -1,0 +1,16 @@
+<h2>Join the Club</h2>
+
+<form method="POST" action="/join" class="auth-card">
+    <div class="form-grid">
+        <label for="code">Secret Code</label>
+            <input type="password" id="code" name="code" required>
+
+                <div class="form-actions">
+                    <button type="submit">Submit</button>
+                        </div>
+                            </div>
+                            </form>
+
+                            <% if (error) { %>
+                            <p style="color: red;"><%= error %></p>
+                            <% } %>

@@ -8,12 +8,12 @@
 }
 .form-grid{
     display: grid;
-    grid-template-columns: 70px 1fr;
+    grid-template-columns: 100px 1fr;
     gap: 12px 16px;
     align-items: center;
 }
 .form-grid label{
-    justify-self: start;
+    justify-self: end;
     font-weight: 600;
     color: #0b27c9;
 }
@@ -42,7 +42,7 @@
 .form-actions button:hover{
     background-color: #0e76d8;
 }
-.form-error {
+.form-error{
     grid-column: 1 / -1;
     color: #c0392b;
     background: #ffeaea;

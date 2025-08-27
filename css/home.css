@@ -1,0 +1,16 @@
+.message{
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fafafa;
+}
+.message h2{
+    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
+}
+.message .meta{
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
